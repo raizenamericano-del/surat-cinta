@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: linear-gradient(135deg, #180914 0%, #2b1022 50%, #1c0b18 100%);
+    color: #fff1f2;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #180914;
+}
+::-webkit-scrollbar-thumb {
+  background: #f43f5e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
