@@ -12,16 +12,20 @@ import CertificateModal from '@/components/CertificateModal';
 import AudioModal from '@/components/AudioModal';
 import VercelModal from '@/components/VercelModal';
 import SecretVaultModal from '@/components/SecretVaultModal';
+import ScratchCardModal from '@/components/ScratchCardModal';
+import CinemaReelModal from '@/components/CinemaReelModal';
 import LiveToast from '@/components/LiveToast';
 
 export default function Home() {
   const [audioModalOpen, setAudioModalOpen] = useState(false);
   const [vercelModalOpen, setVercelModalOpen] = useState(false);
   const [vaultModalOpen, setVaultModalOpen] = useState(false);
+  const [scratchModalOpen, setScratchModalOpen] = useState(false);
+  const [cinemaModalOpen, setCinemaModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen relative font-sans">
-      {/* Background HTML5 Canvas Particle Engine */}
+      {/* Background HTML5 Canvas Particle Engine (Heart Mouse Trail + Petals) */}
       <ParticleCanvas />
 
       {/* Floating Instagram/TikTok style Live Activity Toast */}
@@ -32,12 +36,17 @@ export default function Home() {
         onOpenAudioModal={() => setAudioModalOpen(true)}
         onOpenVercelModal={() => setVercelModalOpen(true)}
         onOpenVaultModal={() => setVaultModalOpen(true)}
+        onOpenScratchModal={() => setScratchModalOpen(true)}
+        onOpenCinemaModal={() => setCinemaModalOpen(true)}
       />
 
       {/* Main Container */}
       <main className="relative z-10 pt-24 pb-16 px-4 sm:px-6 max-w-6xl mx-auto space-y-24">
         {/* 1. Hero Section (fetches /api/stats) */}
-        <Hero />
+        <Hero
+          onOpenCinemaModal={() => setCinemaModalOpen(true)}
+          onOpenScratchModal={() => setScratchModalOpen(true)}
+        />
 
         {/* 2. Interactive Apology Letter & Minigame (/api/apology) */}
         <ApologyLetter />
@@ -48,7 +57,7 @@ export default function Home() {
         {/* 4. 6 Reasons Sinta is Special (3D Flip Cards) */}
         <LoveReasons />
 
-        {/* 5. NEW: Sci-Fi Love Compatibility Scanner (1000% Jodoh) */}
+        {/* 5. Sci-Fi Love Compatibility Scanner (1000% Jodoh) */}
         <LoveCompatibility />
 
         {/* 6. Love Meter Slider & Quiz */}
@@ -65,27 +74,33 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
               <div className="flex items-center gap-2 text-rose-300 font-semibold mb-2">
-                <span>🎵 Pengaturan Musik & Pesan Suara</span>
+                <span>🎵 Musik & Suara Rifki</span>
               </div>
               <p className="text-xs sm:text-sm text-rose-200/80 leading-relaxed">
                 Aplikasi ini dilengkapi dengan{' '}
                 <strong className="text-rose-300">
-                  Synthesizer Musik Romantis Lofi
+                  Lofi Romantic Synthesizer
                 </strong>{' '}
-                otomatis dan pemutar suara permintaan maaf resmi Rifki.
+                dan rekaman suara asli Rifki yang romantis & santai.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <button
                   onClick={() => setAudioModalOpen(true)}
-                  className="px-5 py-2 rounded-full bg-rose-500 hover:bg-rose-600 text-white text-xs sm:text-sm font-medium transition-all inline-flex items-center gap-2"
+                  className="px-5 py-2 rounded-full bg-rose-500 hover:bg-rose-600 text-white text-xs sm:text-sm font-semibold transition-all inline-flex items-center gap-2 shadow-lg"
                 >
-                  <span>Buka Panel Audio & Suara</span>
+                  <span>🔊 Buka Pemutar Suara Rifki</span>
+                </button>
+                <button
+                  onClick={() => setScratchModalOpen(true)}
+                  className="px-5 py-2 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs sm:text-sm font-semibold transition-all inline-flex items-center gap-2 shadow-md"
+                >
+                  <span>✨ Gosok Kartu Hadiah</span>
                 </button>
                 <button
                   onClick={() => setVaultModalOpen(true)}
-                  className="px-5 py-2 rounded-full bg-gradient-to-r from-amber-500 to-rose-600 text-white text-xs sm:text-sm font-medium transition-all inline-flex items-center gap-2 shadow-md"
+                  className="px-5 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-amber-400 text-amber-300 text-xs sm:text-sm font-semibold transition-all inline-flex items-center gap-2"
                 >
-                  <span>🔐 Buka Brankas Rahasia (0208)</span>
+                  <span>🔐 Vault Rahasia (0208)</span>
                 </button>
               </div>
             </div>
@@ -95,14 +110,13 @@ export default function Home() {
                 <span>🚀 Siap Deploy ke Vercel Full-Stack</span>
               </div>
               <p className="text-xs sm:text-sm text-rose-200/80 leading-relaxed mb-4">
-                Aplikasi ini dibuat menggunakan <strong className="text-white">Next.js 14 Full-Stack</strong> dengan Serverless API Routes. Siap langsung tayang di{' '}
-                <strong className="text-white">Vercel</strong>!
+                Proyek <strong className="text-white">Next.js 14 Full-Stack</strong> ini langsung nyambung ke Serverless API Vercel. Tinggal upload GitHub, 40 detik live!
               </p>
               <button
                 onClick={() => setVercelModalOpen(true)}
                 className="px-5 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs sm:text-sm font-medium inline-flex items-center gap-2 transition-all"
               >
-                <span>Lihat Panduan Deploy Vercel</span>
+                <span>Lihat Cara Deploy Vercel</span>
               </button>
             </div>
           </div>
@@ -123,10 +137,12 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Modals */}
+      {/* Interactive Modals */}
       <AudioModal isOpen={audioModalOpen} onClose={() => setAudioModalOpen(false)} />
       <VercelModal isOpen={vercelModalOpen} onClose={() => setVercelModalOpen(false)} />
       <SecretVaultModal isOpen={vaultModalOpen} onClose={() => setVaultModalOpen(false)} />
+      <ScratchCardModal isOpen={scratchModalOpen} onClose={() => setScratchModalOpen(false)} />
+      <CinemaReelModal isOpen={cinemaModalOpen} onClose={() => setCinemaModalOpen(false)} />
     </div>
   );
 }

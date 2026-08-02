@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, Maximize2, X } from 'lucide-react';
+import { Heart, Maximize2, X, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function PhotoGallery() {
@@ -16,90 +16,88 @@ export default function PhotoGallery() {
     {
       id: 'IMG-20260709-WA0014.jpg',
       category: 'romantis',
-      title: 'Happy Engagement Kita ❤️',
-      badge: '💍 Tunangan Kita',
-      badgeColor: 'bg-rose-500/80',
+      title: 'Tunangan Kita yang Manis ❤️',
+      badge: '💍 Happy Engagement',
+      badgeColor: 'bg-rose-500/90',
       caption:
-        'Momen istimewa saat kita mengikat janji. Cincin ini saksi bahwa cinta Rifki buat Sinta itu tulus dan serius abis!',
+        'Momen pas kita resmi tunangan. Cincin di jari kamu bukti kalau aku serius banget sama kamu, Sinta ~',
       story:
-        'Momen bahagia saat kita resmi bertunangan. Cincin di jari adalah bukti seriusnya cinta Rifki kepada Sinta Nuriya. Terima kasih sudah memilih Rifki jadi pasangan hidupmu.',
+        'Dari awal kita kenal sampai akhirnya bisa sampai tahap tunangan ini, rasanya bersyukur banget punya kamu. Cincin ini saksi kalau cintaku ke kamu itu beneran tulus dan serius abis!',
     },
     {
       id: 'IMG-20260702-WA0016.jpg',
       category: 'romantis',
       title: 'Versi Anime Pelindungmu 💪',
-      badge: '💪 Pelindung Sinta',
-      badgeColor: 'bg-emerald-600/80',
+      badge: '💪 Siap Jagain Sinta',
+      badgeColor: 'bg-emerald-600/90',
       caption:
-        'Edit versi anime/buff biar kelihatan sangar siap jagain Sinta selamanya! Hati tetap selembut kapas buat kamu ~',
+        'Edit versi berotot biar kelihatan garang jagain kamu! Tapi aslinya hati tetap lembut buat kamu doang wkwk.',
       story:
-        'Foto tunangan versi berotot biar kelihatan tangguh siap melindungi Sinta dari segala bahaya! Tapi aslinya hati Rifki tetap lembut dan romantis cuma buat kamu ~',
+        'Foto tunangan versi buff/anime hero biar kelihatan tangguh siap jagain Sinta dari segala bahaya wkwk! Walaupun fotonya lucu-lucuan, tapi niat melindungimu 1000% serius!',
     },
     {
       id: 'IMG-20260630-WA0013.jpg',
       category: 'romantis',
-      title: 'Menatap Samudra & Masa Depan',
-      badge: '🌊 Damai & Indah',
-      badgeColor: 'bg-sky-500/80',
+      title: 'Menatap Samudra Bersamamu 🌊',
       caption:
-        'Melihat laut yang luas bikin damai, sama kayak pas ada di dekat Sinta. Seluas itu juga rasa sayang dan maafku.',
+        'Lihat lautan luas bikin tenang, sama persis pas aku ada di dekat kamu. Seluas itu juga rasa sayangku.',
       story:
-        'Melihat luasnya samudra, seluas itulah rasa sayang, rasa bersyukur, dan harapan Rifki untuk masa depan indah bersama Sinta.',
+        'Melihat laut yang luas bikin damai banget. Seluas itu juga rasa sayang, rasa bersyukur, dan harapanku buat masa depan kita nanti bareng kamu, Sinta.',
     },
     {
       id: 'IMG-20260503-WA0106.jpg',
       category: 'kecil',
-      title: 'Nostalgia Gemes Masa Kecil 🎓',
-      badge: '👶 Nostalgia Gemes',
-      badgeColor: 'bg-amber-500/80',
+      title: 'Foto Gemes Masa Kecil 🎓',
+      badge: '👶 Nostalgia Gemoy',
+      badgeColor: 'bg-amber-500/90',
       caption:
-        'Dari kecil udah imut banget! Bukti kalau kita itu jodoh yang lucu dari dulu sampai sekarang dan selamanya.',
+        'Dari kecil kita udah imut banget! Bukti kalau kita emang jodoh yang lucu dari dulu sampai sekarang.',
       story:
-        'Foto wisuda kecil dan bersandar manis! Bukti kalau sejak kecil kita sudah ditakdirkan lucu dan menceriakan dunia. Semoga sampai kakek-nenek pun tetap sekompak ini!',
+        'Foto wisuda kecil dan bersandar manis! Lihat foto masa kecil ini bikin senyum sendiri. Bukti kalau dari dulu kita udah ditakdirkan gemes dan cocok bareng.',
     },
     {
       id: 'IMG-20260715-WA0065.jpg',
       category: 'kocak',
       title: "'KU TUMBUK KAUU' 😂🍌",
-      badge: '🍌 Legendary Meme',
-      badgeColor: 'bg-yellow-500/80 text-black',
+      badge: '🍌 Kelakuan Absurd',
+      badgeColor: 'bg-yellow-500/90 text-black',
       caption:
-        'Kumis legendaris & pisang! Kelakuan random yang kadang bikin ngelus dada, tapi selalu bikin rindu kan?',
+        'Kumis palsu & pisang! Maafin ya kalau aku suka absurd dan random, tapi janji ini demi bikin kamu ketawa!',
       story:
-        'Salah satu kelakuan random paling ikonis! Pakai kumis palsu dan pisang Lego. Maafin ya sayang kalau Rifki suka absurd, tapi janji ini semua demi bikin kamu senyum dan tertawa!',
+        'Salah satu kelakuan random paling ikonis wkwk! Pakai kumis palsu dan pisang Lego. Maafin ya sayang kalau aku suka absurd, tapi semua ini biar kamu gak pernah bosen bareng aku!',
     },
     {
       id: 'IMG-20260613-WA0014.jpg',
       category: 'kocak',
       title: 'Filter Lebah Kocak 🐝💛',
       badge: '🐝 Filter Kocak',
-      badgeColor: 'bg-amber-500/80',
+      badgeColor: 'bg-amber-500/90',
       caption:
-        'Filter lebah pun nggak bisa menyembunyikan pesona lucunya kita! Selalu seru bisa ketawa bareng Sinta.',
+        'Bahkan pas pakai filter lebah bengkak begini pun kamu tetep gemesin abis! Nggak bosen ketawa bareng kamu.',
       story:
-        'Bahkan ketika pakai filter lebah bengkak begini pun kamu tetap kelihatan menggemaskan dan lucu! Kita nggak pernah malu untuk bercanda dan jadi diri sendiri bareng.',
+        'Bahkan pas pakai filter lebah kocak begini kamu tetep keliatan lucu dan gemes! Kita nggak pernah ragu buat konyol bareng, itu yang bikin hubungan ini asik banget.',
     },
     {
       id: 'IMG-20260311-WA0001.jpg',
       category: 'kocak',
       title: 'Zaman Sekolah & Squidward 🎨',
       badge: '🎨 Zaman Sekolah',
-      badgeColor: 'bg-purple-500/80',
+      badgeColor: 'bg-purple-500/90',
       caption:
-        'Lukisan Squidward dan stiker troll face! Bukti keseruan dan kebersamaan kita sejak masa sekolah yang ngangenin.',
+        'Masa-masa sekolah dengan lukisan Squidward dan stiker wajah lucu! Banyak banget kenangan seru kita.',
       story:
-        'Masa-masa sekolah dengan lukisan Squidward dan stiker wajah lucu! Banyak cerita kocak yang udah kita lewati dari masa remaja sampai sekarang.',
+        'Kenangan zaman sekolah lengkap dengan lukisan Squidward dan stiker troll face wkwk! Perjalanan kita udah melewati banyak babak yang ngangenin dari zaman remaja sampai sekarang.',
     },
     {
       id: 'IMG-20260617-WA0031.jpg',
       category: 'kocak',
-      title: 'Doodle Abstrak Kita 🖊️🖤',
-      badge: '🖊️ Seni Kita',
-      badgeColor: 'bg-gray-500/80',
+      title: 'Doodle Abstrak Kita 🖊️',
+      badge: '🖊️ Seni Cerita Kita',
+      badgeColor: 'bg-gray-500/90',
       caption:
-        'Coretan seni sederhana yang jadi bukti kalau hal-hal kecil bersama Sinta selalu terasa bermakna dan seru.',
+        'Coretan seni sederhana yang jadi bukti kalau hal-hal kecil bareng kamu selalu terasa bermakna dan seru.',
       story:
-        'Doodle lucu dan unik ini seperti cerita kita: tidak harus selalu konvensional, tapi selalu punya makna, tawa, dan seni keindahan tersendiri.',
+        'Doodle lucu dan unik ini sama kayak cerita kita: nggak harus selalu biasa aja, tapi selalu punya warna, tawa, dan keindahannya sendiri.',
     },
   ];
 
@@ -115,7 +113,6 @@ export default function PhotoGallery() {
   }, []);
 
   const handleLike = async (photoId) => {
-    // Optimistic update
     setLikes((prev) => ({
       ...prev,
       [photoId]: (prev[photoId] || 0) + 1,
@@ -156,14 +153,13 @@ export default function PhotoGallery() {
     <section id="galeri" className="scroll-mt-28">
       <div className="text-center mb-8">
         <span className="text-rose-400 font-script text-3xl block mb-1">
-          Momen Indah & Absurd Kita
+          Foto-Foto Kita dari Manis sampai Absurd
         </span>
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
-          Galeri Kenangan Sinta & Rifki
+          Galeri Cerita Sinta & Rifki 📸
         </h2>
         <p className="text-rose-200/80 text-sm sm:text-base mt-2">
-          Klik tombol filter untuk menelusuri kategori, atau klik foto untuk
-          melihat cerita lengkapnya
+          Pilih kategori foto di bawah atau klik fotonya buat baca cerita seru di baliknya!
         </p>
 
         {/* Filter Bar */}
@@ -172,7 +168,7 @@ export default function PhotoGallery() {
             onClick={() => setFilter('semua')}
             className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium border transition-all ${
               filter === 'semua'
-                ? 'bg-rose-500/40 border-rose-400 text-white'
+                ? 'bg-rose-500/40 border-rose-400 text-white shadow-lg'
                 : 'bg-white/5 border-rose-500/20 text-rose-200 hover:bg-rose-500/20'
             }`}
           >
@@ -182,7 +178,7 @@ export default function PhotoGallery() {
             onClick={() => setFilter('romantis')}
             className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium border transition-all ${
               filter === 'romantis'
-                ? 'bg-rose-500/40 border-rose-400 text-white'
+                ? 'bg-rose-500/40 border-rose-400 text-white shadow-lg'
                 : 'bg-white/5 border-rose-500/20 text-rose-200 hover:bg-rose-500/20'
             }`}
           >
@@ -192,7 +188,7 @@ export default function PhotoGallery() {
             onClick={() => setFilter('kecil')}
             className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium border transition-all ${
               filter === 'kecil'
-                ? 'bg-rose-500/40 border-rose-400 text-white'
+                ? 'bg-rose-500/40 border-rose-400 text-white shadow-lg'
                 : 'bg-white/5 border-rose-500/20 text-rose-200 hover:bg-rose-500/20'
             }`}
           >
@@ -202,21 +198,21 @@ export default function PhotoGallery() {
             onClick={() => setFilter('kocak')}
             className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium border transition-all ${
               filter === 'kocak'
-                ? 'bg-rose-500/40 border-rose-400 text-white'
+                ? 'bg-rose-500/40 border-rose-400 text-white shadow-lg'
                 : 'bg-white/5 border-rose-500/20 text-rose-200 hover:bg-rose-500/20'
             }`}
           >
-            😂 Kocak & Random (3)
+            😂 Kocak & Meme Absurd (3)
           </button>
         </div>
       </div>
 
-      {/* Grid */}
+      {/* Grid with 3D Tilt hover animation */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredPhotos.map((photo) => (
           <div
             key={photo.id}
-            className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-rose-500/30 hover:-translate-y-1 hover:shadow-xl transition-all group"
+            className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-rose-500/30 card-tilt group"
           >
             <div className="relative h-72 overflow-hidden bg-black/40">
               <img
@@ -231,9 +227,9 @@ export default function PhotoGallery() {
               </div>
               <button
                 onClick={() => openLightbox(photo)}
-                className="absolute bottom-3 right-3 px-3 py-1.5 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-md text-white text-xs flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-all"
+                className="absolute bottom-3 right-3 px-3 py-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md text-white text-xs flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-all"
               >
-                <Maximize2 className="w-3.5 h-3.5" /> Story
+                <Maximize2 className="w-3.5 h-3.5 text-rose-400" /> Story
               </button>
             </div>
             <div className="p-5">
@@ -243,10 +239,10 @@ export default function PhotoGallery() {
                 </h3>
                 <button
                   onClick={() => handleLike(photo.id)}
-                  className="flex items-center gap-1 text-xs px-2.5 py-1 rounded-full bg-rose-500/20 text-rose-300 hover:bg-rose-500/40 transition-colors"
+                  className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-rose-500/20 text-rose-300 hover:bg-rose-500/40 transition-colors"
                 >
                   <Heart className="w-3.5 h-3.5 fill-current" />
-                  <span>{likes[photo.id] || 0}</span>
+                  <span className="font-bold">{likes[photo.id] || 0}</span>
                 </button>
               </div>
               <p className="text-rose-200/80 text-sm leading-relaxed">
@@ -259,8 +255,8 @@ export default function PhotoGallery() {
 
       {/* Lightbox Modal */}
       {lightbox.open && (
-        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="relative max-w-4xl w-full bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden border border-rose-500/40 shadow-2xl max-h-[90vh] flex flex-col md:flex-row">
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-fadeIn">
+          <div className="relative max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-rose-500/40 shadow-2xl max-h-[90vh] flex flex-col md:flex-row">
             <button
               onClick={() => setLightbox({ ...lightbox, open: false })}
               className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/70 hover:bg-rose-600 text-white flex items-center justify-center transition-colors"
@@ -279,8 +275,8 @@ export default function PhotoGallery() {
             <div className="md:w-2/5 p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
               <div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 text-xs font-semibold mb-4">
-                  <Heart className="w-3.5 h-3.5 fill-current" />
-                  <span>Kenangan Sinta & Rifki</span>
+                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                  <span>Cerita Dibalik Foto Ini</span>
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-white mb-4">
                   {lightbox.title}
@@ -292,13 +288,13 @@ export default function PhotoGallery() {
 
               <div className="mt-8 pt-4 border-t border-rose-500/20 flex items-center justify-between">
                 <span className="text-xs text-rose-300/70">
-                  National Girlfriend Day 2026
+                  Sinta & Rifki Memories 2026
                 </span>
                 <button
                   onClick={() => setLightbox({ ...lightbox, open: false })}
                   className="px-5 py-2 rounded-full bg-rose-500/20 hover:bg-rose-500/40 text-rose-200 text-xs font-semibold transition-colors"
                 >
-                  Tutup Galeri
+                  Tutup
                 </button>
               </div>
             </div>

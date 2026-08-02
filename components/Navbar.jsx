@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Heart, Music, Volume2, Rocket, Lock } from 'lucide-react';
+import { Heart, Music, Volume2, Rocket, Lock, Gift, Film } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
-export default function Navbar({ onOpenAudioModal, onOpenVercelModal, onOpenVaultModal }) {
+export default function Navbar({
+  onOpenAudioModal,
+  onOpenVercelModal,
+  onOpenVaultModal,
+  onOpenScratchModal,
+  onOpenCinemaModal,
+}) {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioCtxRef = useRef(null);
   const synthIntervalRef = useRef(null);
@@ -75,7 +81,7 @@ export default function Navbar({ onOpenAudioModal, onOpenVercelModal, onOpenVaul
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-rose-500/20 py-3 px-4 sm:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-rose-500/30 py-3 px-3 sm:px-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
           <span className="w-8 h-8 rounded-full bg-rose-500/20 flex items-center justify-center border border-rose-400 group-hover:scale-110 transition-transform">
@@ -87,56 +93,75 @@ export default function Navbar({ onOpenAudioModal, onOpenVercelModal, onOpenVaul
         </a>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-5 text-sm font-medium text-rose-100">
+        <div className="hidden xl:flex items-center gap-5 text-sm font-medium text-rose-100">
           <a href="#surat" className="hover:text-rose-400 transition-colors">Surat Maaf</a>
           <a href="#galeri" className="hover:text-rose-400 transition-colors">Galeri Foto</a>
-          <a href="#alasan" className="hover:text-rose-400 transition-colors">6 Alasan</a>
-          <a href="#love-meter" className="hover:text-rose-400 transition-colors">Love Meter</a>
-          <a href="#guestbook" className="hover:text-rose-400 transition-colors">Pesan Cinta</a>
+          <a href="#alasan" className="hover:text-rose-400 transition-colors">Alasan Kamu Spesial</a>
+          <a href="#compatibility" className="hover:text-rose-400 transition-colors">Kalkulator Kompak</a>
+          <a href="#guestbook" className="hover:text-rose-400 transition-colors">Balasan Kamu</a>
           <a href="#sertifikat" className="hover:text-rose-400 transition-colors">Sertifikat</a>
         </div>
 
         {/* Controls */}
-        <div className="flex items-center gap-2 sm:gap-2.5">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          {/* Cinema Reel Button */}
+          <button
+            onClick={onOpenCinemaModal}
+            className="px-2.5 py-1.5 rounded-full text-xs font-semibold bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400 text-rose-200 flex items-center gap-1 transition-all"
+            title="Putar Cinema Reel Story Kita"
+          >
+            <Film className="w-3.5 h-3.5 text-rose-400" />
+            <span className="hidden md:inline">Cinema Reel</span>
+          </button>
+
+          {/* Scratch Card Button */}
+          <button
+            onClick={onOpenScratchModal}
+            className="px-2.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400 text-amber-300 flex items-center gap-1 transition-all"
+            title="Gosok Kartu Hadiah Cinta"
+          >
+            <Gift className="w-3.5 h-3.5 text-amber-300" />
+            <span className="hidden md:inline">Kartu Gosok</span>
+          </button>
+
           {/* Secret Vault Button */}
           <button
             onClick={onOpenVaultModal}
-            className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-amber-500/30 to-rose-500/30 hover:from-amber-500/50 hover:to-rose-500/50 border border-amber-400 text-amber-300 flex items-center gap-1.5 transition-all shadow-sm"
-            title="Buka Brankas Rahasia Kita"
+            className="px-2.5 py-1.5 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 border border-amber-400/50 text-amber-300 flex items-center gap-1 transition-all"
+            title="Buka Brankas Rahasia Kita (0208)"
           >
             <Lock className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Vault Rahasia</span>
+            <span className="hidden lg:inline">Vault</span>
           </button>
 
           <button
             onClick={toggleMusic}
-            className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium border flex items-center gap-1.5 transition-all ${
+            className={`px-2.5 py-1.5 rounded-full text-xs font-medium border flex items-center gap-1 transition-all ${
               isMusicPlaying
-                ? 'bg-rose-500 border-rose-400 text-white animate-pulseGlow'
+                ? 'bg-rose-500 border-rose-400 text-white animate-pulse'
                 : 'bg-white/5 border-rose-400/50 text-rose-200 hover:border-rose-400'
             }`}
             title="Putar Musik Romantis (Lofi Synthesizer)"
           >
             <Music className={`w-3.5 h-3.5 ${isMusicPlaying ? 'animate-spin' : ''}`} />
-            <span className="hidden md:inline">
-              {isMusicPlaying ? 'Musik Aktif 🎵' : 'Musik'}
+            <span className="hidden sm:inline">
+              {isMusicPlaying ? 'Musik 🎵' : 'Musik'}
             </span>
           </button>
 
           <button
             onClick={onOpenAudioModal}
-            className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white shadow-md flex items-center gap-1.5 transition-all"
+            className="px-2.5 py-1.5 rounded-full text-xs font-medium bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white shadow-md flex items-center gap-1 transition-all"
           >
             <Volume2 className="w-3.5 h-3.5 animate-bounce" />
-            <span className="hidden sm:inline">Pesan Suara</span>
+            <span className="hidden sm:inline">Voice</span>
           </button>
 
           <button
             onClick={onOpenVercelModal}
-            className="hidden sm:flex px-2.5 py-1.5 rounded-full text-xs font-medium bg-amber-400/20 hover:bg-amber-400/30 border border-amber-400/50 text-amber-300 items-center gap-1 transition-colors"
+            className="hidden sm:flex px-2 py-1.5 rounded-full text-xs font-medium bg-amber-400/20 hover:bg-amber-400/30 border border-amber-400/50 text-amber-300 items-center gap-1 transition-colors"
           >
             <Rocket className="w-3.5 h-3.5" />
-            <span>Vercel</span>
           </button>
         </div>
       </div>

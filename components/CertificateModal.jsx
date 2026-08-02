@@ -10,17 +10,17 @@ export default function CertificateModal() {
     <section id="sertifikat" className="scroll-mt-28">
       <div className="text-center mb-8">
         <span className="text-rose-400 font-script text-3xl block mb-1">
-          Award Resmi untuk Sinta
+          Award Resmi Buat Kamu
         </span>
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
-          Sertifikat Girlfriend Terbaik 2026
+          Sertifikat Cewek Paling Sabar 2026 ❤️
         </h2>
         <p className="text-rose-200/80 text-sm sm:text-base mt-2">
-          Sertifikat ini sah dan berlaku selamanya di hati Rifki
+          Sertifikat ini sah dan berlaku selamanya di hidupku
         </p>
       </div>
 
-      <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-md rounded-3xl p-8 sm:p-12 border-2 border-amber-400/60 shadow-2xl relative overflow-hidden text-center bg-gradient-to-b from-rose-950/80 to-black/90">
+      <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-md rounded-3xl p-8 sm:p-12 border-2 border-amber-400/60 shadow-2xl relative overflow-hidden text-center bg-gradient-to-b from-rose-950/80 to-black/90 card-tilt">
         <div className="absolute top-4 left-4 text-amber-400/50">
           <Award className="w-8 h-8" />
         </div>
@@ -29,29 +29,27 @@ export default function CertificateModal() {
         </div>
 
         <div className="inline-block px-4 py-1 rounded-full bg-amber-400/20 border border-amber-400/50 text-amber-300 text-xs font-bold uppercase tracking-widest mb-4">
-          CERTIFICATE OF ETERNAL LOVE & APPRECIATION
+          OFFICIAL LOVE & PATIENCE CERTIFICATE
         </div>
 
         <h3 className="font-serif text-3xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-rose-300 to-amber-200 mb-6">
-          Best Girlfriend of The Year
+          Best Girlfriend of The Universe
         </h3>
 
         <p className="text-rose-200/80 text-sm sm:text-base uppercase tracking-wider mb-2">
-          Diberikan Dengan Penuh Bangga Kepada:
+          Diberikan dengan penuh rasa sayang & bangga kepada:
         </p>
 
         <div className="font-script text-4xl sm:text-6xl text-rose-400 font-bold my-6 py-2 border-y border-amber-400/30">
           Sinta Nuriya
         </div>
 
-        <p className="text-rose-100/90 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-8">
-          Atas kesabaran yang tak terbatas, senyuman yang selalu menghangatkan,
-          serta pendampingan setia kepada{' '}
+        <p className="text-rose-100/95 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-8">
+          Atas kesabaran tingkat dewa ngadepin kelakuan absurdku, senyum yang selalu ngadem-ngademin hati, serta kesetiaan nemenin{' '}
           <span className="text-rose-300 font-semibold">
             Maulana Rifki Fadhilla (Rifki)
           </span>{' '}
-          dalam setiap suasana. Segala salah dan ngambek resmi dimaafkan dengan
-          cinta 1000%!
+          dalam segala kondisi. Segala kesalahan, ngambek, dan meme random resmi dimaafkan dengan cinta 1000%!
         </p>
 
         <div className="flex items-center justify-between max-w-md mx-auto pt-6 border-t border-rose-500/30 text-xs sm:text-sm text-rose-300">
@@ -73,7 +71,7 @@ export default function CertificateModal() {
         <div className="mt-8 pt-4">
           <button
             onClick={printCertificate}
-            className="px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-600 hover:to-rose-700 text-white font-semibold text-sm shadow-md flex items-center gap-2 mx-auto"
+            className="px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-600 hover:to-rose-700 text-white font-semibold text-sm shadow-md flex items-center gap-2 mx-auto transform hover:scale-105 transition-all"
           >
             <Printer className="w-4 h-4" />
             <span>Cetak / Simpan Sertifikat Cinta</span>

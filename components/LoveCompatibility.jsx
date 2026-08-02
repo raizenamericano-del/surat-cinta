@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, Heart, Zap, CheckCircle2 } from 'lucide-react';
+import { Sparkles, Zap, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function LoveCompatibility() {
@@ -11,20 +11,20 @@ export default function LoveCompatibility() {
     if (scanning) return;
     setScanning(true);
     setScore(0);
-    setStatus('⚡ Memindai kecocokan hati Sinta & Rifki...');
+    setStatus('⚡ Mendeteksi frekuensi hati Sinta & Rifki...');
 
     let current = 0;
     const interval = setInterval(() => {
       current += 25;
       if (current <= 100) {
         setScore(current);
-        setStatus('🔍 Menganalisis momen absurd & tunangan...');
+        setStatus('🔍 Menganalisis kesabaran Sinta ngadepin Rifki random...');
       } else if (current <= 500) {
         setScore(current);
-        setStatus('💖 Mengukur tingkat kesabaran Sinta...');
+        setStatus('💖 Mengukur tingkat kangen pas lagi jauh...');
       } else if (current <= 900) {
         setScore(current);
-        setStatus('🚀 Mengkalkulasi masa depan bersama...');
+        setStatus('🚀 Mengkalkulasi momen tunangan sampai nikah nanti...');
       } else {
         clearInterval(interval);
         setScore(1000);
@@ -42,25 +42,25 @@ export default function LoveCompatibility() {
   };
 
   return (
-    <section className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-rose-500/30 text-center relative overflow-hidden">
+    <section id="compatibility" className="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-rose-500/30 text-center relative overflow-hidden card-tilt">
       <div className="max-w-2xl mx-auto space-y-6">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold uppercase tracking-wider">
           <Sparkles className="w-4 h-4" />
-          <span>Kalkulator Kecocokan Spesial</span>
+          <span>Kalkulator Kompak Sinta & Rifki</span>
         </div>
 
         <h3 className="text-2xl sm:text-4xl font-serif font-bold text-white">
-          Seberapa Kompak Sinta & Rifki? ⚡
+          Seberapa Cocok Kita Sih? ⚡
         </h3>
         <p className="text-rose-200/80 text-sm">
-          Tekan tombol di bawah untuk memindai kecocokan kepribadian, momen tunangan, dan tingkah kocak kalian dengan algoritma Full-Stack cinta!
+          Coba tes di sini seberapa cocok kita pas lagi bercanda random &apos;KU TUMBUK KAUU&apos; atau pas lagi romantis bareng wkwk!
         </p>
 
         {/* Display Box */}
         <div className="py-6 px-4 rounded-2xl bg-black/40 border border-rose-500/30 max-w-md mx-auto">
           {score === null ? (
             <div className="py-6 text-rose-300/70 text-sm italic">
-              &quot;Siap untuk dipindai... Tekan tombol Scan Cinta&quot;
+              &quot;Siap buat dipindai... Tekan tombol Scan di bawah ini&quot;
             </div>
           ) : (
             <div className="space-y-3">
@@ -88,14 +88,14 @@ export default function LoveCompatibility() {
             className="px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-600 hover:to-rose-700 text-white font-bold text-sm shadow-lg shadow-rose-500/40 inline-flex items-center gap-2 transition-all transform hover:scale-105 disabled:opacity-50"
           >
             <Zap className={`w-5 h-5 ${scanning ? 'animate-spin' : ''}`} />
-            <span>{scanning ? 'Membaca Data Cinta...' : '⚡ Scan Kecocokan Kita Sekarang'}</span>
+            <span>{scanning ? 'Membaca Data Cinta...' : '⚡ Tes Kecocokan Kita Sekarang'}</span>
           </button>
         </div>
 
         {score === 1000 && (
           <div className="pt-2 flex items-center justify-center gap-2 text-xs sm:text-sm text-emerald-300 font-semibold">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>Sertifikasi Cocok Resmi: Anti-Bosan & Setia Selamanya ❤️</span>
+            <span>Terbukti Resmi: Pasangan Terkompak & Anti-Bosan 2026 ❤️</span>
           </div>
         )}
       </div>

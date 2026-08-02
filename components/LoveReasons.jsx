@@ -10,40 +10,40 @@ export default function LoveReasons() {
 
   const reasons = [
     {
-      title: 'Kesabaran Luar Biasa 🌸',
+      title: 'Sabarnya Kamu 🌸',
       frontIcon: <Smile className="w-8 h-8" />,
       backIcon: <Heart className="w-8 h-8 text-white/50 mb-2" />,
-      text: 'Sinta selalu sabar menghadapi sifat random dan tingkah absurd Rifki. Kesabaranmu bikin Rifki semakin sayang setiap harinya!',
+      text: 'Kamu selalu sabar banget ngadepin tingkahku yang kadang random atau absurd. Sabarnya kamu tuh yang bikin aku makin sayang tiap hari!',
     },
     {
-      title: 'Senyuman Bikin Adem ☀️',
+      title: 'Senyummu Moodbooster ☀️',
       frontIcon: <Sun className="w-8 h-8" />,
       backIcon: <Sparkles className="w-8 h-8 text-white/50 mb-2" />,
-      text: 'Satu senyuman Sinta bisa langsung mengusir rasa lelah dan stres setelah seharian beraktivitas. Kamu adalah moodbooster nomor satu!',
+      text: 'Satu senyum dari kamu pas lagi cemberut atau capek tuh langsung ngilangin capekku seharian. Kamu beneran moodbooster nomor satu!',
     },
     {
       title: 'Teman Hidup Terbaik 💍',
       frontIcon: <Gem className="w-8 h-8" />,
       backIcon: <HeartHandshake className="w-8 h-8 text-white/50 mb-2" />,
-      text: 'Momen tunangan kita adalah salah satu babak terindah. Rifki bersyukur banget bisa memilihmu sebagai pasangan masa depan.',
+      text: 'Momen tunangan kita adalah salah satu babak terindah dalam hidupku. Aku bersyukur banget bisa milih kamu jadi masa depanku.',
     },
     {
-      title: 'Asyik Diajak Absurd 😂',
+      title: 'Asyik Diajak Konyol 😂',
       frontIcon: <Laugh className="w-8 h-8" />,
       backIcon: <PartyPopper className="w-8 h-8 text-white/50 mb-2" />,
-      text: 'Dari filter lebah sampai bercandaan KU TUMBUK KAUU, kamu selalu bisa diajak seru-seruan tanpa gengsi. Bersamamu selalu seru!',
+      text: 'Dari filter lebah sampai bercandaan KU TUMBUK KAUU, kamu selalu bisa diajak seru-seruan tanpa gengsi. Bareng kamu gak pernah bosen!',
     },
     {
-      title: 'Selalu Setia & Tulus 💖',
+      title: 'Tulus & Setia Banget 💖',
       frontIcon: <ShieldCheck className="w-8 h-8" />,
       backIcon: <Heart className="w-8 h-8 text-white/50 mb-2" />,
-      text: 'Ketulusan hati Sinta adalah alasan utama kenapa Rifki cinta banget. Kamu selalu mendukung saat senang ataupun susah.',
+      text: 'Ketulusan hati kamu adalah alasan utama kenapa aku sayang banget. Kamu selalu nyemangatin aku pas senang ataupun susah.',
     },
     {
-      title: 'Masa Depan Bersama 🌟',
+      title: 'Masa Depan Kita 🌟',
       frontIcon: <Compass className="w-8 h-8" />,
       backIcon: <Infinity className="w-8 h-8 text-white/50 mb-2" />,
-      text: 'Janji Rifki untuk terus bekerja keras, melindungi, dan membahagiakan Sinta sampai hari-hari bahagia kita berikutnya!',
+      text: 'Janjiku buat terus kerja keras, jagain kamu, dan bahagiain Sinta sampai hari-hari indah kita selanjutnya!',
     },
   ];
 
@@ -51,14 +51,13 @@ export default function LoveReasons() {
     <section id="alasan" className="scroll-mt-28">
       <div className="text-center mb-10">
         <span className="text-rose-400 font-script text-3xl block mb-1">
-          Cinta & Pujian Rifki
+          Kenapa Harus Kamu, Sinta?
         </span>
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
-          6 Alasan Kenapa Sinta Spesial
+          6 Alasan Kamu Spesial Banget Buatku ❤️
         </h2>
         <p className="text-rose-200/80 text-sm sm:text-base mt-2">
-          Arahkan kursor atau klik kartu untuk membalik & membaca pesan rahasia
-          di baliknya
+          Coba klik kartu-kartu di bawah ini deh buat liat pesan rahasia di baliknya ~
         </p>
       </div>
 
@@ -67,7 +66,7 @@ export default function LoveReasons() {
           <div
             key={idx}
             onClick={() => toggleFlip(idx)}
-            className="h-64 cursor-pointer [perspective:1000px]"
+            className="h-64 cursor-pointer [perspective:1000px] card-tilt"
           >
             <div
               className={`relative w-full h-full text-center transition-transform duration-700 [transform-style:preserve-3d] ${
@@ -83,7 +82,7 @@ export default function LoveReasons() {
                   {item.title}
                 </h3>
                 <p className="text-xs text-rose-300/70">
-                  Klik untuk melihat pesan
+                  Klik buat liat pesan
                 </p>
               </div>
 

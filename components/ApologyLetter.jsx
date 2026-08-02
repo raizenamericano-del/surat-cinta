@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HeartHandshake, Unlock, Heart } from 'lucide-react';
+import { HeartHandshake, Unlock, Heart, Smile } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function ApologyLetter() {
@@ -42,11 +42,14 @@ export default function ApologyLetter() {
       transition: 'all 0.3s ease',
     });
 
-    if (count > 4) {
-      setBtnText('Yakin masih ngambek? 🥺');
-    }
-    if (count > 7) {
-      setBtnText('Klik tombol Maafin Dong aja sayang ~ ❤️');
+    if (count === 1) {
+      setBtnText('Eits meleset wkwk 😜');
+    } else if (count === 3) {
+      setBtnText('Yah ga kena dong~ 😂');
+    } else if (count === 5) {
+      setBtnText('Udah maafin aja sayang, ntar tak traktir es krim! 🍦');
+    } else if (count > 7) {
+      setBtnText('Ayo klik tombol Maafin Dong aja sayang ~ ❤️');
     }
   };
 
@@ -85,20 +88,20 @@ export default function ApologyLetter() {
     <section id="surat" className="scroll-mt-28">
       <div className="text-center mb-10">
         <span className="text-rose-400 font-script text-3xl block mb-1">
-          Dari Hati yang Paling Dalam
+          Surat Jujur dari Rifki
         </span>
         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
-          Surat Cinta & Permintaan Maaf Rifki
+          Maaf & Sayangnya Aku Buat Kamu ❤️
         </h2>
         <p className="text-rose-200/80 text-sm sm:text-base mt-2">
-          Klik amplop di bawah ini untuk membaca surat spesial untukmu
+          Coba klik amplop di bawah ini buat baca pesanku ya sayang
         </p>
       </div>
 
       <div className="max-w-3xl mx-auto">
         <div
           className={`bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border transition-all ${
-            isOpen ? 'border-rose-400' : 'border-rose-500/30'
+            isOpen ? 'border-rose-400 aurora-border' : 'border-rose-500/30'
           } shadow-2xl relative overflow-hidden`}
         >
           {/* Sealed Cover */}
@@ -111,19 +114,19 @@ export default function ApologyLetter() {
                 <HeartHandshake className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-serif text-rose-200 font-semibold mb-2">
-                Untuk: Sinta Nuriya Sayang ❤️
+                Buat Kesayanganku: Sinta Nuriya ❤️
               </h3>
               <p className="text-sm text-rose-300/80 mb-6">
-                Amplop Cinta Bersegel Resmi • Klik atau ketuk untuk membuka
+                Surat Resmi Bersegel • Klik atau tap buat buka
               </p>
               <button className="px-5 py-2 rounded-full bg-rose-500/20 border border-rose-400 text-rose-200 text-sm font-medium hover:bg-rose-500/30 transition-colors inline-flex items-center gap-2">
                 <Unlock className="w-4 h-4" />
-                <span>Buka Segel Surat</span>
+                <span>Buka Surat dari Rifki</span>
               </button>
             </div>
           )}
 
-          {/* Open Letter */}
+          {/* Open Letter - AUTHENTIC HUMAN COPYWRITING */}
           {isOpen && (
             <div className="transition-all duration-700">
               <div className="flex items-center justify-between border-b border-rose-500/20 pb-4 mb-6">
@@ -131,8 +134,8 @@ export default function ApologyLetter() {
                   <span className="w-3 h-3 rounded-full bg-rose-500"></span>
                   <span className="w-3 h-3 rounded-full bg-amber-400"></span>
                   <span className="w-3 h-3 rounded-full bg-emerald-400"></span>
-                  <span className="text-xs text-rose-300/70 ml-2">
-                    Surat-Permintaan-Maaf-Rifki.md
+                  <span className="text-xs text-rose-300/70 ml-2 font-mono">
+                    surat-buat-sinta.md
                   </span>
                 </div>
                 <span className="text-xs text-rose-300/70">
@@ -140,45 +143,25 @@ export default function ApologyLetter() {
                 </span>
               </div>
 
-              <div className="space-y-4 text-rose-100/90 leading-relaxed font-normal text-base sm:text-lg">
+              <div className="space-y-4 text-rose-100/95 leading-relaxed font-normal text-base sm:text-lg">
                 <p className="font-script text-3xl text-rose-300">
-                  Halo Sinta Sayangku,
+                  Hai Sinta Sayangku,
                 </p>
 
                 <p>
-                  Selamat{' '}
-                  <span className="text-rose-300 font-semibold">
-                    Hari National Girlfriend Day
-                  </span>
-                  ! Di hari spesial untuk pacar-pacar hebat di seluruh dunia ini,
-                  Rifki mau bikin sesuatu yang khusus buat merayakan keberadaan kamu
-                  di hidup Rifki.
+                  Selamat <span className="text-rose-300 font-semibold">Hari Girlfriend Day yaa</span>! Hari ini aku mau bikin sesuatu yang khusus buat ngerayain kamu yang udah selalu ada di hidupku.
                 </p>
 
                 <p>
-                  Lewat web Full-Stack sederhana tapi penuh cinta ini, pertama-tama
-                  Rifki mau ucapkan{' '}
-                  <span className="text-amber-300 font-semibold">
-                    terima kasih yang sebesar-besarnya
-                  </span>
-                  . Terima kasih udah selalu jadi pasangan yang sabar, yang mau
-                  mendengarkan cerita Rifki, dan menemani setiap langkah kita—dari
-                  momen absurd lucu-lucuan kita sampai momen indah di hari tunangan
-                  kita.
+                  Jujur deh, aku mungkin bukan cowok yang paling romantis di dunia. Kadang kelakuanku suka random, absurd, atau malah ngeselin (apalagi pas bercanda tiba-tiba bilang <span className="text-amber-300 font-semibold">&apos;KU TUMBUK KAUU&apos;</span> wkwk). Tapi sumpah deh, dari awal kita kenal sampai momen tunangan kita kemarin, kamu tuh bener-bener rumah dan tempat pulangkahku yang paling nyaman.
                 </p>
 
                 <div className="p-4 rounded-2xl bg-rose-500/10 border-l-4 border-rose-400 my-4 text-rose-200 italic">
-                  &quot;Rifki juga mau minta maaf dari hati yang paling dalam...
-                  Maafin Rifki ya sayang kalau selama ini sering bikin kamu kesel,
-                  ngambek, cemberut, atau punya sifat random yang kadang bikin ngelus
-                  dada. Rifki selalu berusaha jadi pasangan terbaik buat Sinta.&quot;
+                  &quot;Aku mau minta maaf ya sayang kalau selama ini sering bikin kamu kesel, ngambek, cemberut, atau bercandaku suka kelewatan. Makasih banget udah selalu sabar ngadepin aku. Aku bakal terus belajar buat jadi pasangan terbaik buat kamu.&quot;
                 </div>
 
                 <p>
-                  Kamu adalah perempuan terhebat, terindah, dan paling spesial.
-                  Jangan pernah ragu sama rasa sayang Rifki ke Sinta. Semoga kita
-                  selalu kompak, saling melengkapi, dan terus bahagia sampai
-                  selamanya.
+                  Kamu adalah cewek terhebat, terindah, dan paling spesial. Jangan pernah ragu sama rasa sayangku ke kamu ya. Semoga kita selalu sekompak ini, saling melengkapi, dan bahagia terus sampai hari-hari indah kita berikutnya.
                 </p>
 
                 <p className="pt-4 font-script text-3xl text-right text-rose-300">
@@ -190,7 +173,7 @@ export default function ApologyLetter() {
                 </p>
               </div>
 
-              {/* Minigame */}
+              {/* Interactive Minigame */}
               <div className="mt-10 pt-8 border-t border-rose-500/20 text-center">
                 <h4 className="text-xl font-serif text-white mb-2">
                   Jadi... Sinta Maafin Rifki Nggak Nih? 🥺👉👈
@@ -213,15 +196,17 @@ export default function ApologyLetter() {
                       onMouseOver={handleDodge}
                       onClick={handleDodge}
                       style={noBtnStyle}
-                      className="px-6 py-3 rounded-full bg-gray-700/50 hover:bg-gray-700 text-gray-300 font-medium text-sm border border-gray-600"
+                      className="px-6 py-3 rounded-full bg-gray-700/50 hover:bg-gray-700 text-gray-300 font-medium text-sm border border-gray-600 transition-all duration-300"
                     >
                       <span>{btnText}</span>
                     </button>
                   </div>
                 ) : (
-                  <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-rose-500/20 border border-emerald-400/40 text-emerald-300 font-medium animate-bounce">
-                    🎉 YEYYY! Terima Kasih Sayangku Sinta! Resmi Dimaafkan 100%!
-                    Rifki Janji Makin Sayang! 💕
+                  <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-rose-500/20 border border-emerald-400/40 text-emerald-300 font-bold flex items-center justify-center gap-2 animate-bounce">
+                    <Smile className="w-5 h-5" />
+                    <span>
+                      🎉 YEYYY! Makasih Sayangku Sinta! Resmi Dimaafkan 100%! Aku Janji Makin Sayang! 💕
+                    </span>
                   </div>
                 )}
               </div>
